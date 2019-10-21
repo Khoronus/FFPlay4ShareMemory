@@ -1,0 +1,22 @@
+# Binary build files and folders
+build/
+exe/
+bin/
+obj/
+.vs/
+binary/
+database/
+__pycache__/
+ckpt/
+
+# Specific files
+src/to_compile/configure/path_configuration.txt
+build_result.txt
+BEV_alphamask_generator.spec
+BEV_calibration.spec
+BEV_get_points.spec
+newCalib15_bindings.pyd
+src/Calibration/FishEyeCalibration/BEV_Calibration/newcalib15_bindings/datapath.h
+
+# Specific folders
+src/Calibration/FishEyeCalibration/BEV_Calibration/ipython_notebook/AcademicSocietyPyPrograms/newCalib15/pyinstaller/dist/*
