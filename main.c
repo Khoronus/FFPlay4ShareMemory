@@ -1083,6 +1083,8 @@ static void video_image_display(VideoState *is)
 	//	avpicture_get_size(vp->frame->format, vp->frame->width, vp->frame->height));
 	// sharing memory
 	{// to bgr
+		create_shm();
+
 		unsigned char* data_cvmat = get_cvmat_ptr(vp->frame->width, vp->frame->height);
 		AVFrame dst;
 		int w = vp->frame->width, h = vp->frame->height;
@@ -1100,7 +1102,7 @@ static void video_image_display(VideoState *is)
 		sws_scale(convert_ctx, vp->frame->data, vp->frame->linesize, 0, h,
 			dst.data, dst.linesize);
 		sws_freeContext(convert_ctx);
-		show_cvmat();
+		//show_cvmat();
 	}
 
 	SDL_RenderCopyEx(renderer, is->vid_texture, NULL, &rect, 0, NULL, vp->flip_v ? SDL_FLIP_VERTICAL : 0);

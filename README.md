@@ -21,9 +21,16 @@ Download the Simple Directmedia Layer (SDL2) libraries (binary and development) 
 https://www.libsdl.org/download-2.0.php
 
 
-
-
 # Additional link
 Please, consider to check the following project to build ffmpeg under Windows.
 https://github.com/m-ab-s/media-autobuild_suite
 
+
+# Useful references for C/C++ mixing code
+https://www.oracle.com/technical-resources/articles/it-infrastructure/mixing-c-and-cplusplus.html
+https://stackoverflow.com/questions/2744181/how-to-call-c-function-from-c
+
+# License
+Please refer to the FFMpeg project for the license information (FFmpeg codebase is mainly LGPL-licensed with optional components licensed under GPL) 
+https://www.ffmpeg.org
+https://github.com/FFmpeg/FFmpeg 
