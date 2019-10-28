@@ -30,6 +30,9 @@ https://github.com/m-ab-s/media-autobuild_suite
 https://www.oracle.com/technical-resources/articles/it-infrastructure/mixing-c-and-cplusplus.html
 https://stackoverflow.com/questions/2744181/how-to-call-c-function-from-c
 
+# Check the network usage (Win)
+Win+R and type Resmon.exe (Resource Monitor)
+
 # License
 Please refer to the FFMpeg project for the license information (FFmpeg codebase is mainly LGPL-licensed with optional components licensed under GPL) 
 https://www.ffmpeg.org
