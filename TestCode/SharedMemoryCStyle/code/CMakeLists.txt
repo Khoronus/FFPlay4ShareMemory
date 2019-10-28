@@ -1,0 +1,30 @@
+SET( PROJ_NAME      "SharedMemoryCStyle" )
+SET( PROJ_PATH      ${CMAKE_SOURCE_DIR} )
+SET( PROJ_OUT_PATH  ${CMAKE_BINARY_DIR} )
+SET( PROJ_LIBRARIES "" )
+SET( PROJ_INCLUDES  "" )
+
+FILE( GLOB_RECURSE PROJ_SOURCES *.cpp *.cc *.c)
+FILE( GLOB_RECURSE PROJ_HEADERS *.hpp *.h)
+
+######################################################################
+# Project
+
+PROJECT( ${PROJ_NAME} )
+
+#ADD_EXECUTABLE( ${PROJ_NAME} ${PROJ_SOURCES}  ${PROJ_HEADERS})
+ADD_LIBRARY( ${PROJ_NAME} STATIC ${PROJ_SOURCES} ${PROJ_HEADERS})
+INCLUDE_DIRECTORIES( ${PROJ_INCLUDES} ${PROJ_INCLUDES} ${PROJ_OPENCV_INCLUDES} ${Boost_INCLUDE_DIR} ${Eigen_INCLUDE_DIRS})
+TARGET_LINK_LIBRARIES( ${PROJ_NAME} ${PROJ_LIBRARIES} ${PROJ_LIBRARIES_COMMON} ${OpenCV_LIBRARIES} ${Boost_LIBRARIES})
+
+set(CompilerFlags
+        CMAKE_CXX_FLAGS
+        CMAKE_CXX_FLAGS_DEBUG
+        CMAKE_CXX_FLAGS_RELEASE
+        CMAKE_C_FLAGS
+        CMAKE_C_FLAGS_DEBUG
+        CMAKE_C_FLAGS_RELEASE
+        )
+foreach(CompilerFlag ${CompilerFlags})
+  string(REPLACE "/MD" "/MT" ${CompilerFlag} "${${CompilerFlag}}")
+endforeach()
