@@ -12,13 +12,13 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -std=c++11 -Wall -O0 -fno-o
 include(CMakeToolsHelpers OPTIONAL)
 
 include_directories(${OpenCV_INCLUDE_DIRS} 
-  "D:/workspace/programs/ThirdPartyProg/ffmpeg-msvc-build/ffmpeg"
-  "D:/workspace/programs/ThirdPartyProg/ffmpeg-msvc-build/ffmpeg/fftools"
+  "D:/workspace/programs/ModProg/ffmpeg-msvc-build/ffmpeg"
+  "D:/workspace/programs/ModProg/ffmpeg-msvc-build/ffmpeg/fftools"
   "D:/workspace/programs/ThirdPartyLib/SDL2-2.0.10/include"
   "D:/workspace/university/todai/BirdView3D/src/Memory/SharedMemoryCStyle/code"
 )
 
-add_executable(FFPlay4ShareMemory main.c "D:/workspace/programs/ThirdPartyProg/ffmpeg-msvc-build/FFmpeg/fftools/cmdutils.c")
+add_executable(FFPlay4ShareMemory main.c "D:/workspace/programs/ModProg/ffmpeg-msvc-build/FFmpeg/fftools/cmdutils.c")
 target_compile_options(FFPlay4ShareMemory PRIVATE "/TC")
 
 set(AVLIB 
