@@ -16,6 +16,8 @@ If mysis cannot execute build.sh:
  - C:\msys64\usr\bin\bash      (msys64 it is expected to be located at that path)
  - "$APPVEYOR_BUILD_FOLDER/build.sh"
 
+It is possible that it is not necessary to build the code from source.
+
 # Additional requirements
 Download the Simple Directmedia Layer (SDL2) libraries (binary and development) libraries.
 https://www.libsdl.org/download-2.0.php
@@ -37,3 +39,4 @@ Win+R and type Resmon.exe (Resource Monitor)
 Please refer to the FFMpeg project for the license information (FFmpeg codebase is mainly LGPL-licensed with optional components licensed under GPL) 
 https://www.ffmpeg.org
 https://github.com/FFmpeg/FFmpeg 
+
